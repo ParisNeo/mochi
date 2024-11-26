@@ -49,7 +49,7 @@ with gr.Blocks() as demo:
 @click.option("--cpu_offload", is_flag=True, help="Whether to offload model to CPU")
 def launch(model_dir, cpu_offload):
     configure_model(model_dir, cpu_offload)
-    demo.launch()
+    demo.launch(server_name="0.0.0.0")
 
 
 if __name__ == "__main__":
